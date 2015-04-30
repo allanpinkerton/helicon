@@ -14,9 +14,11 @@ public abstract class SingleFragmentActivity extends FragmentActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
     
+        //find fragment
         FragmentManager fm = getSupportFragmentManager();
         Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
         
+        //if not found, create a new one
         if (fragment == null) {
         	fragment = createFragment();
         	fm.beginTransaction()
