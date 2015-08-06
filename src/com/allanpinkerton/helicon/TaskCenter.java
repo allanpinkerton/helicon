@@ -1,6 +1,7 @@
 package com.allanpinkerton.helicon;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.UUID;
 
 import android.content.Context;
@@ -15,6 +16,15 @@ public class TaskCenter {
 		//initiates as new arraylist to store tasks
 		mAppContext = appContext;
 		mTasks = new ArrayList<Task>();
+		
+		for (int i = 0; i<50; i++) {
+			Task t = new Task();
+			t.setTitle("Task "+i);
+			t.setSolved(false);
+			t.setDueDate(new Date());
+			
+			mTasks.add(t);
+		}
 	}
 	
 	public static TaskCenter get(Context c) {

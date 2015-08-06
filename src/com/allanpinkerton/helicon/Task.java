@@ -9,6 +9,7 @@ public class Task {
 	private UUID mId;
 	private String mTitle;
 	private Date mDueDate;
+	private boolean mSolved;
 	private String mCategory;
 	private Duration mDuration;
 	private int mImportance;
@@ -61,6 +62,14 @@ public class Task {
 
 	public void setImportance(int importance) {
 		mImportance = importance;
+	}
+
+	public boolean isSolved() {
+		return mSolved;
+	}
+
+	public void setSolved(boolean solved) {
+		mSolved = solved;
 	}
 
 	
